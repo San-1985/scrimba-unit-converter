@@ -27,12 +27,10 @@ btn.addEventListener("click", function () {
   mass.querySelector("p").innerHTML = `${value} kilos = ${(
     value * kilo
   ).toFixed(3)} pounds | ${value} pounds = ${(value / kilo).toFixed(3)} kilos`;
-});
 
-//clear the field if it is not empty for the next calculation, but it doesn't work - why???
-if (inputField.value !== "") {
-  inputField.addEventListener("click", function () {
-    inputField.value = "";
-    console.log("cleared");
-  });
-}
+  if (inputField.value !== "") {
+    inputField.addEventListener("click", function () {
+      inputField.value = "";
+    });
+  }
+});
